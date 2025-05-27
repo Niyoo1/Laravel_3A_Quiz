@@ -33,7 +33,8 @@ class employeecontroller extends Controller
     ]);
 
     employee::create($request->all());
-    return view ('employee.create');
+    
+    return view ('employee.create',  compact('employees'));
     }
 
     public function edit( int $id)

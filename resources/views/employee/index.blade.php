@@ -53,13 +53,22 @@
                                 <td>{{$items->age}}</td>
                                 <td>{{$items->address}}</td>
                                 <td>{{$items->zip}}</td>
+<<<<<<< HEAD
                                 <td> 
                                 <!--<span class="badge bg-success"><a href="{{  route('employee.edit' , $items->id )}}" class="btn btn-success mx-3  "><h5>Edit</h5></a></span>
+=======
+                                 <td> 
+                                    <span class="badge bg-success"><a href="{{  route('employee.edit',  $items->id)}}" class="btn btn-success mx-3  "><h5>Edit</h5></a></span>
+>>>>>>> 40b3e1005aa63ffb9fdfe26356743ee5c30ad025
                                 </td>
                                 <td> 
                                     
                                 <span class="badge bg-danger"><a href="{{  route('employee.delete', $items->id)}}" class="m-3 p-lg-5"><h5>Delete</h5></a></span>
+<<<<<<< HEAD
                                 </td>-->
+=======
+                                </td> 
+>>>>>>> 40b3e1005aa63ffb9fdfe26356743ee5c30ad025
                                 
                             </tr>
                             @endforeach
