@@ -33,13 +33,14 @@ class employeecontroller extends Controller
     ]);
 
     employee::create($request->all());
-    return view ('employee.create');
+    
+    return view ('employee.create',  compact('employees'));
     }
 
     public function edit( int $id)
     {
         $employees = employee::find($id);
-        return view ('employee.edit');
+        return view ('employee.edit',  compact('employees')); 
     }
 
     public function update(Request $request, int $id) {
@@ -59,9 +60,9 @@ class employeecontroller extends Controller
             }
     }
 
-    public function desroy(int $id){
+    public function destroy(int $id){
         $employees = employee::findOrFail($id);
-        $employees->deete();
+        $employees->delete();
         return redirect ()->back()->with('status','Employee Deleted');
     }
 }
